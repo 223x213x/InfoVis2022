@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <title>W04: task2</title>
+    </head>
+    <body>
+	<script src="https://d3js.org/d3.v4.min.js"></script>
+	<script>
+	 var svg = d3.select("body").append("svg");
+     var padding = 10;
+     var height = 20;
+	 d3.csv("https://223x213x.github.io/InfoVis2022/W04/w04_task2.csv", draw );
+	 function draw(data){
+	    svg.selectAll("rect")
+		.data(data)
+	        .enter()
+	        .append("rect")
+	        .attr("x", padding +70)
+	        .attr("y", function(d,i){ return padding + i * (height + padding); })
+	        .attr("width", function(d,i){ return d.w; })
+            .attr("height", function(d){ return height; })
+            .style("fill", function(d){ return d.c; })
+		svg.selectAll("text")
+        .data(data)
+           .enter()
+           .append("text")
+           .attr("x", padding)
+           .attr("y", function(d,i){ return padding + i * (height + padding) + 15; })
+		   //.attr("font-weight",10)
+           .text(function(d){ return d.l; })
+	 };
+	</script>
+
+    </body>
+</html>
