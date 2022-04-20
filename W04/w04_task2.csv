@@ -1,7 +1,7 @@
 l,x,y,w,h,c
 Label 1,10,10,100,20,red
 Label 2,10,40,50,20,green
-Label 3,10,70,20,blue
-Label 4,10,100,20,pink
-Label 5,10,130,20,yellow
-Label 6,10,160,20,purple
+Label 3,10,70,80,20,blue
+Label 4,10,100,30,20,pink
+Label 5,10,130,120,20,yellow
+Label 6,10,160,70,20,purple
