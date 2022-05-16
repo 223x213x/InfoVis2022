@@ -94,6 +94,9 @@ class PieChart{
                 .data(self.pie(self.data))
                 .enter()
                 .append('text')
+                  .text(d => d.data.l)
+                  .attr("text-anchor", "middle")
+                  .attr("transform", d => `translate(${self.arc.centroid(d)})`);/*
                 //.attr('transform',`translate(${self.arc.centroid(d)} )`)
                  .attr("transform", function(d) { return "translate("+self.arc.centroid(d)+ ")" })
                 //.attr("dy", "5px")
@@ -101,7 +104,7 @@ class PieChart{
                 .attr("text-anchor", "middle")
                 .data(self.data)
                 .text(d => d.l);
-                //.text("text"); 
+                //.text("text"); */
 
            /* self.pieGroup.append("text")
                 .attr("fill", "black")
