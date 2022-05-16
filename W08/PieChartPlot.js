@@ -105,6 +105,7 @@ class PieChart{
 
            /* self.pieGroup.append("text")
                 .attr("fill", "black")
+                .attr("text-anchor", "middle")
                 .attr("transform", function(d) { return "translate(" + text.centroid(d) + ")"; })
                 .attr("dy", "5px")
                 .attr("font", "10px")
