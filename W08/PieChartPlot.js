@@ -98,7 +98,7 @@ class PieChart{
                 .attr("transform", function(d) { return "translate("+self.arc.centroid(d)+ ")" })
                 //.attr("dy", "5px")
                 .attr("font", "10px")
-                //.attr("text-anchor", "middle")
+                .attr("text-anchor", "middle")
                 .data(self.data)
                 .text(d => d.l);
                 //.text("text"); 
