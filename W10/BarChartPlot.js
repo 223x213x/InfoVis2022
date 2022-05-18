@@ -59,6 +59,7 @@ class BarChart{
           
             const xlabel_space = 40;
             self.svg.append('text')
+                  //.transition().duration(1000)
                   .attr('x', self.config.width / 2)
                   .attr('y', self.inner_height + self.config.margin.top + xlabel_space)
                   .text( self.config.xlabel );
@@ -80,6 +81,7 @@ class BarChart{
             self.chart.selectAll("rect")
                 .data(self.data)
                 .join("rect")
+                .transition().duration(1000)
                 .attr("x", 0 )
                 .attr("y", d => self.yscale( d.l ) )
                 .attr("width", d => self.xscale( d.w ) )
