@@ -89,18 +89,11 @@ class ScatterPlot {
                 d3.select('#tooltip')
                     .style('left', (e.pageX + padding) + 'px')
                     .style('top', (e.pageY + padding) + 'px');
-                    //.circles.style('fill',d => d.c);
-                    //circles.style('fill', d => d.c).attr("r", d => d.r )
-                    //self.chart.select('circle').style('fill',d => d.c).attr("r", d => d.r);
                     circles.attr("class", "scatter");
-                    //circles.attr("class", "scatter")
-                    //.attr("r",d => d.r);
             })
             .on('mouseleave', () => {
                 d3.select('#tooltip')
                     .style('opacity', 0);
-                    //self.chart.selectAll('circle').data(self.data).attr("r", 5).style('fill', 'black');
-                    //circles.style('fill', 'black').attr("r", d => 5 );
             });
 
             
