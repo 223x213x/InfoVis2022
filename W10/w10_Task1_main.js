@@ -19,12 +19,5 @@ d3.csv("https://sukekuuaosou.github.io/InfoVis2022/W04/w04_task2.csv")
     });
 
 
-/*d3.select('#reverse')
-    .on('click', d => {
-    bar_plot.data.reverse();
-    bar_plot.render(bar_plot.data);
-});*/
-
-
 
     

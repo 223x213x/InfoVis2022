@@ -100,7 +100,7 @@ class BarChart{
                     self.update();
                 });
 
-            d3.select('#max')
+            d3.select('#descend')
                 .on('click', d => {
                     self.data.sort(function(first, second){
                         if (Number(first.w) > Number(second.w)){
