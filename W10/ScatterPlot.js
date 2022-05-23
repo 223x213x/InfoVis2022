@@ -68,8 +68,8 @@ class ScatterPlot {
        circles
             .attr("cx", d => self.xscale( d.x ) )
             .attr("cy", d => self.yscale( d.y ) )
-            .attr("r", d => d.r )
-            .style("fill", d => d.c);
+            .attr("r", d => d.r );
+            //.style("fill", d => d.c);
            
         self.xaxis_group
             .call( self.xaxis );
@@ -81,20 +81,30 @@ class ScatterPlot {
             .on('mouseover', (e,d) => {
                 d3.select('#tooltip')
                     .style('opacity', 1)
-                    .html(`<div class="tooltip-label">Position</div>(${d.x}, ${d.y}),(r=${d.r})`);
+                    .html(`<div class="tooltip-label">Position</div>(${d.x}, ${d.y})
+                    <div class="tooltip-label">radius</div>${d.r}`);
             })
             .on('mousemove', (e) => {
                 const padding = 10;
                 d3.select('#tooltip')
                     .style('left', (e.pageX + padding) + 'px')
                     .style('top', (e.pageY + padding) + 'px');
+                    //.circles.style('fill',d => d.c);
+                    //circles.style('fill', d => d.c).attr("r", d => d.r )
+                    //self.chart.select('circle').style('fill',d => d.c).attr("r", d => d.r);
+                    circles.attr("class", "scatter");
+                    //circles.attr("class", "scatter")
+                    //.attr("r",d => d.r);
             })
             .on('mouseleave', () => {
                 d3.select('#tooltip')
                     .style('opacity', 0);
+                    //self.chart.selectAll('circle').data(self.data).attr("r", 5).style('fill', 'black');
+                    //circles.style('fill', 'black').attr("r", d => 5 );
             });
 
             
         
-    }
+ 
+        }
 }
