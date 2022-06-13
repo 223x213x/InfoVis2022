@@ -248,7 +248,7 @@ d3.csv("https://sukekuuaosou.github.io/InfoVis2022/final_task/ws.csv")
             parent: '#drawing_region_barchart',
             width: 150000,
             height: 600,
-            margin: { top: 30, right: 10, bottom: 400, left: 50 },
+            margin: { top: 30, right: 250, bottom: 400, left: 50 },
             title: '',
             xlabel: 'Match',
             ylabel: 'Maximum score gap [point]',
